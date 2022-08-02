@@ -42,24 +42,23 @@ function mascotaNueva(){
     this.peso=parseInt(prompt("ingrese el peso"))
     this.edad=parseInt(prompt("ingrese edad"))
     mascotas.push(new mascota(this.nombre,this.raza,this.peso,this.edad))
-    console.log(mascotas);
-}
-function mostrarLista(){
-    alert(mascotas)
+    console.log(mascotas); 
 }
 
 
-nuevoIngreso=prompt("desea agregar una nueva mascota?")
+// FUNCIONA
+function agregarMascota(){
+nuevoIngreso=prompt("desea agregar una nueva mascota? escriba 'si' para sumarla")
 if (nuevoIngreso=="si"){
     mascotaNueva();
     console.log(this.nombre + "ha sido agregado a la lista");
     console.log(mascotas);
 }else{
-console.log("ninguna mascota ingeresada")
-}
-
-buscar=prompt("desea buscar un nombre en la lista? escriba el nombre")
-
+alert("ninguna mascota ingeresada")
+}}
+// NO FUNCIONA  SIEMPRE DA RESULTADO TRUE
+function buscarMascota(){
+buscar=prompt("escriba el nombre de la mascota a buscar")
 console.log(mascotas.includes(buscar))
    
       if(true) {
@@ -68,4 +67,13 @@ console.log(mascotas.includes(buscar))
    else{
        console.log(buscar + "no está en la lista")
    }
-console.log("gracias");
+console.log("gracias");}
+
+// NO FUNCIONA
+function mostrarLista(){
+    console.log(mascotas.nombre);
+}
+
+function cantidadMascotas(){
+    console.log(mascotas.length)
+}
